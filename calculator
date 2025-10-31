@@ -1,0 +1,74 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+    void addN(int a, int b){
+        cout<<a+b<<endl;
+        cout<<"Enter 0 to exit";
+    }
+    void subN(int a, int b){
+        cout<<a-b<<endl;
+        cout<<"Enter 0 to exit";
+    }
+    void mulN(int a, int b){
+        cout<<a*b<<endl;
+        cout<<"Enter 0 to exit";
+    }
+    void divN(int a, int b){
+        if(a==0|| b==0){
+            cout<<"one of the value is 0,change it"<<endl;
+        }
+        else{
+        cout<<a/b<<endl;
+        cout<<"Enter 0 to exit";
+        }
+    }
+    void powerN(double a,double b){
+        cout<<pow(a,b)<<endl;
+        cout<<"Enter 0 to exit";
+    }
+    void sqrtN(int a, int b){
+        cout<<sqrt(a)<<endl;
+        cout<<"Enter 0 to exit";
+    }
+    int main (){
+        int B;
+        int C;
+        while (true){
+        cout<< "Enter two numbers(0 0 to exit):";
+        cin>>B>>C;
+        if(B == 0 && C == 0){
+            cout<<"Exiting program."<<endl;
+            break;}
+       
+        else{
+            cout<<"choose a operation:"<<endl;
+            cout<<"A : add"<<endl;
+            cout<<"B : sub"<<endl;
+            cout<<"C : multi"<<endl;
+            cout<<"D : divi"<<endl;
+            cout<<"E : powerN"<<endl;
+            cout<<"F : sqrtN"<<endl;
+            char d;
+            cin>>d;
+            if(d == 'B'){
+            subN(B,C);
+        }
+            else if( d == 'A'){
+                addN(B,C);
+            }
+            else if( d == 'C'){
+                mulN(B,C);
+            }
+            else if (d == 'D'){
+                divN(B,C);
+            }
+            else if( d == 'E'){
+                powerN(B,C);
+            }
+            else if( d == 'F'){
+                sqrtN(B,C);
+            }
+    }
+}
+    }
